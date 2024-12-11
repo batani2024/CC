@@ -15,9 +15,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Ambil konfigurasi dari variabel lingkungan
-GCS_BUCKET_NAME = os.getenv("GCS_BUCKET_NAME", "dataml-1")
-GCS_MODEL_PATH = os.getenv("GCS_MODEL_PATH", "forecast_final_plis")
-GCP_PROJECT_ID = os.getenv("GCP_PROJECT_ID", "batani-1")
+GCS_BUCKET_NAME = os.getenv("GCS_BUCKET_NAME", "---")
+GCS_MODEL_PATH = os.getenv("GCS_MODEL_PATH", "---")
+GCP_PROJECT_ID = os.getenv("GCP_PROJECT_ID", "---")
 
 # Data tanaman
 tanaman_data = {
@@ -98,13 +98,13 @@ tanaman_data = {
     },
     'padi': {
         'data': 'rice_avg_price.xlsx',
-        'scaler': None,  # Tidak ada scaler untuk padi
-        'model': 'best_rice_model.h5'
+        'scaler': 'scaler_rice.pkl',
+        'model': 'best_rice_model.h5' 
     },
     'semangka': {
-        'data': None,  # Tidak ada data semangka 
+        'data': 'watermelon_avg_price.xlsx', 
         'scaler': 'scaler_watermelon.pkl',
-        'model': 'best_watermelon_model.h5'
+        'model': 'best_watermelon_model.h5' 
     }
 }
 
