@@ -1,0 +1,10 @@
+flask
+tensorflow
+joblib
+pandas
+plotly
+google-cloud-storage
+requests
+python-dotenv
+scikit-learn
+
